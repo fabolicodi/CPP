@@ -2,24 +2,14 @@
 #include <stdlib.h>
 
 int main(){
+    int a;
+    int b;
 
-    int x=4;
-    int y=10;
+    scanf("%d", &a);
+    scanf("%d", &b);
 
-    int a=x+y;
-    int b=x-y;
-    int c=x*y;
-    int d=x/y;
-    int e=x%y;
+    int p=(a*b)/2;
 
-    printf("Zbrajanje = %d\n",a);
-    printf("Oduzmianje = %d\n",b);
-    printf("Množenje = %d\n",c);
-    printf("Dijeljenje = %d\n",d);
-    printf("Ostatak cijelobrojnog dijeljenja = %d\n",e);
+    printf("Povrsina pravokutnkog trokuta = %d\n",p);
     return 0;
-
-
-
-
 }
