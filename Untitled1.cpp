@@ -10,7 +10,13 @@ for(i=0;i<n;i++)
 if(A[i]%3==0) return i;
 return -1;
 }
+int pronadi2(int A[],int n, int start){
 
+int i;
+for(i=start;i<n;i++)
+if(A[i]%5==0) return i;
+return -1;
+}
 int main()
 {
     time_t t;
@@ -31,9 +37,10 @@ for(i=0;i<n;i++)
 
 
 int index=pronadi(polje,n);
+int index2=pronadi2(polje,n,index);
 printf("%d\n",index);
 
-for(i=index;i<n;i++)
+for(i=index;i<=index2;i++)
     printf("%d  ",polje[i]);
     return 0;
 }
