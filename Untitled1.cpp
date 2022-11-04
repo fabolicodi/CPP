@@ -19,7 +19,7 @@ int main()
 srand((unsigned) time(&t));
 
 
-printf("kolko os brojeva? (#stoko)");
+printf("kolko os brojeva? \n");
 scanf("%d",&n);
 
 for(i=0;i<n;i++)
@@ -27,11 +27,13 @@ for(i=0;i<n;i++)
 
 
    for(i=0;i<n;i++)
-    printf("%d\n",polje[i]);
+    printf("%d  ",polje[i]);
 
 
 int index=pronadi(polje,n);
 printf("%d\n",index);
 
+for(i=index;i<n;i++)
+    printf("%d  ",polje[i]);
     return 0;
 }
