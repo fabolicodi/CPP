@@ -1,46 +1,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <time.h>
+#include <string.h>
 
-int pronadi(int A[],int n){
+struct idk{
+char ime[50];
+char predmet[50];
+int ocjena;
+}i;
+ void Unos (){
+FILE*filePointer;
+filePointer=fopen("ocjene.txt","a");
+fprintf("ime \t predmet \t ocjena \n");
+printf("Unesi ime predmet i ocjenu");
+scanf("%s %s %d",i.ime, i.predmet, &i.ocjena);
+fprintf("%s \t %s \t %d",i.ime , i.predmet, i.ocjena);
+fclose(filePointer);
+ };
+ 
+ void ProsjekOcjena (){
+ 	
+ };
+ 
+ void Br_predmeta(){
+ 	
+ };
+ 
+ void ProsjekPredmeta(){
+ 	
+ };
 
-int i;
-for(i=0;i<n;i++)
-if(A[i]%3==0) return i;
-return -1;
-}
-int pronadi2(int A[],int n, int start){
+void ispis(){
+ 	
+ };
 
-int i;
-for(i=start;i<n;i++)
-if(A[i]%5==0) return i;
-return -1;
-}
-int main()
+ main()
 {
-    time_t t;
-    int n,i;
-    int polje[50];
-srand((unsigned) time(&t));
+int a;
 
+FILE*filePointer;
+filePointer=fopen("ocjene.txt","a");
+fclose(filePointer);
 
-printf("kolko os brojeva? \n");
-scanf("%d",&n);
-
-for(i=0;i<n;i++)
-    polje[i]=rand()%21+5;
-
-
-   for(i=0;i<n;i++)
-    printf("%d  ",polje[i]);
-
-
-int index=pronadi(polje,n);
-int index2=pronadi2(polje,n,index);
-printf("%d\n",index);
-
-for(i=index;i<=index2;i++)
-    printf("%d  ",polje[i]);
-    return 0;
+    do{
+    Printf("Zelis li Unjeit ocjenu 1, ProsjekoOcjena 2, Br_Predmeta 3, ProsjekPredmeta 4, Ispis 5 ili exit 6")
+	a=getch();
+	if (a=='1')
+	unos();
+	else	if (a=='2')
+			ProsjekOcjene();
+			else	if (a=='3')
+					Br_predmeta();
+					else	if(a=='4')
+							ProsjekPredmeta();
+							else	if(a=='5')
+									ispis();
+	
+    }while(a!='6');
 }
